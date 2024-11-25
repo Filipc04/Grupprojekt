@@ -108,21 +108,24 @@ footer a {
   border: 5px #110934;
   border-collapse: collapse;
   width: 280px;
+  font-weight: bold;
 }
 
 .table_border th{
   border: 2px solid #110934;
   color:#FCCB1D;
   background-color: #110934;
-  padding: 8px; /* Optional: Adds padding inside the cells */
-  text-align: left; /* Optional: Aligns text to the left */
+  padding: 8px; 
+  text-align: left; 
   font-size: 16px;
+  font-weight: bold;
 }
 .table_border td{
   border: 2px solid #110934;
-  padding: 8px; /* Optional: Adds padding inside the cells */
-  text-align: left; /* Optional: Aligns text to the left */
+  padding: 8px; 
+  text-align: left; 
   font-size: 16px;
+  font-weight: bold;
 }
 
 .about_homepage{
