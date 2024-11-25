@@ -164,7 +164,7 @@ footer a {
   max-width: 350px;
   height: auto;
   border-radius: 25px;
-  
+  border: 5px solid #110934;
 }
 .contributions_paragraph{
   max-width: 600px;
