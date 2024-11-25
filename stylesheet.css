@@ -105,7 +105,22 @@ footer a {
 }
 
 .table_border{
-  border: 2px #110934;
+  border: 5px #110934;
+  border-collapse: collapse;
+  width: 280px;
+}
+
+.table_border th{
+  border: 2px solid #110934;
+  color:#FCCB1D;
+  background-color: #110934;
+  padding: 8px; /* Optional: Adds padding inside the cells */
+  text-align: left; /* Optional: Aligns text to the left */
+}
+.table_border td{
+  border: 2px solid #110934;
+  padding: 8px; /* Optional: Adds padding inside the cells */
+  text-align: left; /* Optional: Aligns text to the left */
 }
 
 .about_homepage{
