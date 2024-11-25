@@ -108,7 +108,6 @@ footer a {
   border: 5px #110934;
   border-collapse: collapse;
   width: 280px;
-  font-weight: bold;
 }
 
 .table_border th{
@@ -145,4 +144,28 @@ footer a {
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
+}
+
+.tables_with_image{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.tables{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.member_photos{
+  max-width: 350px;
+  height: auto;
+  border-radius: 25px;
+  
+}
+.contributions_paragraph{
+  max-width: 600px;
 }
