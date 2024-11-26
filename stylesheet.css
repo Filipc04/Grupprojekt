@@ -53,6 +53,28 @@ header a{
   color:#FCCB1D;
   font-size: 25px;
   font-weight: bold;
+  position: relative;
+}
+
+header a:hover{
+  color: #F7F0D4;
+}
+
+header a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #F7F0D4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+header a:hover::after{
+  transform: scaleX(1);
 }
 
 .go_back_arrow img{ 
@@ -186,3 +208,6 @@ footer a {
   text-align: center; /* Optional: Centers the text */
 }
 
+.login_link{
+  margin-left: auto;
+}
