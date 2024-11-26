@@ -39,6 +39,31 @@ h1{
   padding-top: 20px;
   
 }
+.team-members a{
+  position: relative;
+}
+
+.team-members a:hover{
+  color: #3214B8;
+}
+
+.team-members a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #3214B8;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.team-members a:hover::after{
+  transform: scaleX(1);
+}
+
 
 .team-members a:last-child {
   margin-left: 200px;
