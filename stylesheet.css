@@ -116,12 +116,15 @@ a {
   text-decoration: none;
   color: black;
 }
-
-.about-paragraph{
+.about_div{
+  text-align: center;
   margin: 0 auto;
   max-width: 600px;
   line-height: 1.6;
 }
+
+
+
 
 footer {
   display: flex;
