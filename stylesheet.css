@@ -29,14 +29,15 @@ header {
   align-items: center;
 }
 
-h1{
+.main_title{
+  font-size: 45;
   text-align: center;
 }
 
 .team-members {
   text-align: center;
-  font-size: 50px;
-  padding-top: 20px;
+  font-size: 65px;
+  padding-top: 0px;
   
 }
 .team-members a{
@@ -66,7 +67,7 @@ h1{
 
 
 .team-members a:last-child {
-  margin-left: 200px;
+  margin-left: 120px;
 }
 
 header p {
