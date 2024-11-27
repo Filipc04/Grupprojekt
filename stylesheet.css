@@ -25,12 +25,12 @@ header, footer{
 header {
   display: flex;
   justify-content: left; 
-  gap: 30px; 
+  gap: 25px; 
   background-color: #110934; 
   width: 100%; 
   box-sizing: border-box; 
   align-items: center;
-  gap: 10px;
+  
 }
 
 header p {
@@ -43,10 +43,6 @@ header a{
   font-size: 25px;
   font-weight: bold;
   position: relative;
-}
-
-.homepage_header{
-  gap: 30px; 
 }
 
 .homepage_header a:hover{
@@ -159,6 +155,10 @@ header a{
 a {
   text-decoration: none;
   color: black;
+}
+
+.header_link{
+  gap: inherit;
 }
 
 .header_link img{
