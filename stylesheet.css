@@ -95,9 +95,6 @@ header a{
 
 .middle_content_fadein{
   background: url("bilder/background_image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
 }
 
