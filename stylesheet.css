@@ -30,6 +30,7 @@ header {
   width: 100%; 
   box-sizing: border-box; 
   align-items: center;
+  gap: 10px;
 }
 
 header p {
@@ -42,6 +43,10 @@ header a{
   font-size: 25px;
   font-weight: bold;
   position: relative;
+}
+
+.homepage_header{
+  gap: 30px; 
 }
 
 .homepage_header a:hover{
@@ -89,7 +94,6 @@ header a{
 }
 
 .middle_content_fadein{
-  
   background: url("bilder/background_image.jpg");
   background-size: cover;
   background-position: center;
