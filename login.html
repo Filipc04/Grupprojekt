@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filip Carlsson Profile</title>
+  <title>Login page</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -14,10 +14,16 @@
       <img src="bilder/home_icon_white.svg" alt="home icon">
     </a>
   </header>
+  
   <div>
-   
+   <form action="" id="loginForm">
+    <h1>Login</h1>
+    <input type="text" id="username" class="form-control" placeholder="Enter your Username...">
+    <input type="password" id="password" class="form-control" placeholder="Enter your password...">
+    <button type="submit">Log in</button>
+   </form>
   </div>
- 
+    
 
   <footer class="center_footer">
     <a href="https://github.com/Filipc04/Grupprojekt" target="_blank" style="color:var(--primary-white)">Project</a>
@@ -28,5 +34,7 @@
     
     <a href="https://github.com/Filipc04/Grupprojekt" target="_blank" style="color:var(--primary-white)">Page</a>
     </footer>
+
+    <script src="login.js"></script>
 </body>
 </html>
