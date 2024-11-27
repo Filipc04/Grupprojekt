@@ -89,11 +89,7 @@ header a{
 }
 
 .middle_content_fadein{
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex-grow: 1;
-  justify-content: center;
+  
   background: url("bilder/background_image.jpg");
   background-size: cover;
   background-position: center;
