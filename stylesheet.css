@@ -30,7 +30,6 @@ header {
   width: 100%; 
   box-sizing: border-box; 
   align-items: center;
-  
 }
 
 header p {
@@ -38,18 +37,14 @@ header p {
   font-weight: bold; 
 }
 
-header a{
+.header_link, .login_link{
   color:var(--primary-white);
   font-size: 25px;
   font-weight: bold;
   position: relative;
 }
 
-.homepage_header a:hover{
-  color: var(--primary-white);
-}
-
-.homepage_header a::after{
+.header_link::after, .login_link::after{
   content: '';
   position: absolute;
   left: 0;
@@ -62,7 +57,7 @@ header a{
   transition: transform 0.3s ease;
 }
 
-.homepage_header a:hover::after{
+.header_link:hover::after, .login_link:hover::after{
   transform: scaleX(1);
 }
 
@@ -155,10 +150,6 @@ header a{
 a {
   text-decoration: none;
   color: black;
-}
-
-.header_link{
-  gap: inherit;
 }
 
 .header_link img{
