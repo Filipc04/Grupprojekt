@@ -83,7 +83,44 @@ header a{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9)
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  color: var(--primary-white);
+  position: relative;
+}
+
+.middle_content_fadein{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-grow: 1;
+  justify-content: center;
+  background: url("bilder/background_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.middle_content_fadein::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-white);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1.5s ease-in;
+}
+
+.middle_content_fadein.loaded::before {
+  opacity: 1;
+}
+
+.middle_content_fadein * {
+  position: relative;
+  z-index: 2;
 }
 
 .team-members {
@@ -135,7 +172,7 @@ a {
   text-align: center;
   margin: 0 auto;
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 footer {
@@ -201,16 +238,6 @@ footer p {
 
 .about_homepage{
   margin-left: 20px;
-}
-
-.center_footer{
-  /*
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  color: var(--primary-white);
-  */
 }
 
 .center_tables{
