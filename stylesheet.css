@@ -111,7 +111,7 @@ header a{
   background-color: var(--primary-white);
   opacity: 0;
   z-index: 1;
-  transition: opacity 1.5s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .middle_content_fadein.loaded::before {
@@ -155,10 +155,6 @@ header a{
   margin-left: 120px;
 }
 
-.go_back_arrow img{ 
-  height: 60px;
-}
-
 .home_icon img{
   height: 50px;
 }
@@ -166,6 +162,21 @@ header a{
 a {
   text-decoration: none;
   color: black;
+}
+
+.header_link img{
+  height: 20px;
+}
+
+.footer_links img{
+  height: 50px;
+}
+
+.footer_links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 .about_div{
@@ -292,4 +303,8 @@ footer p {
 
 .login_link{
   margin-left: auto;
+}
+
+.login_link img{
+  height: 20px;
 }
