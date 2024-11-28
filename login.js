@@ -29,7 +29,7 @@ function updateRequirement(id, isValid) {
 }
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent form submission
+  event.preventDefault(); 
 
   const username = document.getElementById("username");
   const password = document.getElementById("password").value;
