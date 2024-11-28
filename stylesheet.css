@@ -304,3 +304,9 @@ footer p {
 .login_link img{
   height: 20px;
 }
+
+.valid {
+  color: green;
+}
+
+
