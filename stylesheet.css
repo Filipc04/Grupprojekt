@@ -26,7 +26,7 @@ header {
   display: flex;
   justify-content: left; 
   gap: 25px; 
-  background-color: #110934; 
+  background-color: var(--primary-blue); 
   width: 100%; 
   box-sizing: border-box; 
   align-items: center;
@@ -176,7 +176,7 @@ a {
 
 footer {
   display: flex;
-  background-color: #110934;
+  background-color: var(--primary-blue);
   width: 100%;
   box-sizing: border-box;
   font-weight: bold;
@@ -212,15 +212,15 @@ footer p {
 }
 
 .table_border{
-  border: 5px #110934;
+  border: 5px var(--primary-blue);
   border-collapse: collapse;
   width: 280px;
 }
 
 .table_border th{
-  border: 2px solid #110934;
+  border: 2px solid var(--primary-blue);
   color:var(--primary-white);
-  background-color: #110934;
+  background-color: var(--primary-blue);
   padding: 8px; 
   text-align: left; 
   font-size: 16px;
@@ -228,7 +228,7 @@ footer p {
 }
 
 .table_border td{
-  border: 2px solid #110934;
+  border: 2px solid var(--primary-blue);
   padding: 8px; 
   text-align: left; 
   font-size: 16px;
@@ -265,14 +265,14 @@ footer p {
   max-width: 350px;
   height: auto;
   border-radius: 25px;
-  border: 5px solid #110934;
+  border: 5px solid var(--primary-blue);
 }
 
 .member_photos_2{
   max-width: 350px;
   height: auto;
   border-radius: 25px;
-  border: 5px solid #110934;
+  border: 5px solid var(--primary-blue);
   margin-right: 50px;
 }
 
@@ -281,17 +281,17 @@ footer p {
 }
 
 .list{
-  border: 2px solid #110934;
+  border: 2px solid var(--primary-blue);
   padding: 8px;
   font-size: 16px;
-  color:#110934;
+  color:var(--primary-blue);
   width: 260px;
   margin-top: 20px;
   font-weight: bold;
 }
 
 .list p {
-  background-color: #110934;
+  background-color: var(--primary-blue);
   padding:5px;
   color: var(--primary-white);
   text-align: center; 
