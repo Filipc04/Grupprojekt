@@ -13,13 +13,20 @@
   
   
   <div class="middle_content">
-      <form action="" id="loginForm">
-       <h1>Login</h1>
-       <input type="text" id="username" class="form-control" placeholder="Enter your username...">
-       <input type="password" id="password" class="form-control" placeholder="Enter your password...">
-       <div id="errorMessage"></div>
-       <button type="submit">Log in</button>
-      </form>  
+    <form action="" id="loginForm">
+      <h1>Login</h1>
+      <input type="text" id="username" class="form-control" placeholder="Enter your username...">
+      <input type="password" id="password" class="form-control" placeholder="Enter your password...">
+      <div id="errorMessage" style="margin-top: 10px;">
+        <p>Your password must fill these criteria:</p>
+        <p id="capital" class="invalid">Two uppercase letters</p>
+        <p id="digit" class="invalid">One digit</p>
+        <p id="special" class="invalid">One special character</p>
+        <p id="length" class="invalid">8 characters long</p>
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+    
       
     </div>
 

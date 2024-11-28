@@ -305,8 +305,13 @@ footer p {
   height: 20px;
 }
 
+.invalid {
+  color: red;
+}
+
 .valid {
   color: green;
 }
+
 
 

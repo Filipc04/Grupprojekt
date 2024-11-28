@@ -1,67 +1,80 @@
+document.getElementById("password").addEventListener("input", function () {
+  const password = this.value;
+
+  const capital = /[A-Z]/g;
+  const digit = /\d/;
+  const special = /[!@#$%^&*(),.?":{}|<>]/;
+  const length = /.{8,}/;
+
+  const capitalValid = (password.match(capital) || []).length >= 2;
+  const digitValid = digit.test(password);
+  const specialValid = special.test(password);
+  const lengthValid = length.test(password);
+
+  updateRequirement("capital", capitalValid);
+  updateRequirement("digit", digitValid);
+  updateRequirement("special", specialValid);
+  updateRequirement("length", lengthValid);
+});
+
+function updateRequirement(id, isValid) {
+  const element = document.getElementById(id);
+  if (isValid) {
+    element.classList.add("valid");
+    element.classList.remove("invalid");
+  } else {
+    element.classList.add("invalid");
+    element.classList.remove("valid");
+  }
+}
+
 document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); 
+  event.preventDefault(); // Prevent form submission
+
+  const username = document.getElementById("username");
+  const password = document.getElementById("password").value;
+
+  if (username.value === "" || password === "") {
+    alert("Ensure you input a value in both fields!");
+    return;
+  }
+
+
+  const capital = (password.match(/[A-Z]/g) || []).length >= 2;
+  const digit = /\d/.test(password);
+  const special = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const length = password.length >= 8;
   
-    const username = document.getElementById("username");
-    const password = document.getElementById("password");
-    const errorDiv = document.getElementById("errorMessage");
+  if (username.value === "" || password.value === "") {
+    alert("Ensure you input a value in both fields!");
+    return;
+  }
 
-    errorDiv.innerHTML = "";
+  if(!capital){
+    alert("Your password must contain at least two uppercase letters!");
+    return;
+  }
 
-    const passwordRegex = /^(?=(.*[A-Z]){2,})(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/;
+  if (!digit) {
+    alert("Your password must contain at least one digit!");
+    return;
+  }
 
+  if (!special) {
+    alert("Your password must contain at least one special character!");
+    return;
+  }
 
-  
-    if (username.value === "" || password.value === "") {
-      alert("Ensure you input a value in both fields!");
-      return;
-    } 
+  if (!length) {
+    alert("Your password must be at least 8 characters long!");
+    return;
+  }
 
-    const capital = (password.value.match(/[A-Z]/g) || []).length >= 2;
-    const digit = /\d/.test(password.value);
-    const special = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
-    const length = password.value.length >= 8;
-
-    if(!capital || !digit || !special || !length){
-      if(!capital){
-        const message = document.createElement("p");
-        message.textContent = "Your password must contain at least two uppercase letters!"
-        errorDiv.appendChild(message);
-      }
-
-      if(!digit){
-        const message = document.createElement("p");
-        message.textContent = "Your password must contain at least one digit!"
-        errorDiv.appendChild(message);
-      }
-
-      if(!special){
-        const message = document.createElement("p");
-        message.textContent = "Your password must contain at least one special character!"
-        errorDiv.appendChild(message);
-      }
-
-      if(!length){
-        const message = document.createElement("p");
-        message.textContent = "Your password must be at least 8 characters long!"
-        errorDiv.appendChild(message);
-      }
-      
-      return;
-    } 
-   
-    alert("You are now signed up and logged in!");
-    
-    console.log(
+  alert("You are now signed up and logged in!");
+  console.log(
     `New member has a username of ${username.value} and password of ${password.value}`
-    );
-  
-    
+  );
 
-    console.log(
-      `New member has a username of ${username.value} and password of ${password.value}`
-    );
-  
-    username.value = "";
-    password.value = "";
-  });
-  
+  username.value = "";
+  password.value = "";
+});
