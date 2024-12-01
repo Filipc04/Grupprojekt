@@ -101,5 +101,6 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   setTimeout(() => {
     successMessage.style.display = "none";
-  }, 1000);
+    window.location.href = "index.html";
+  }, 1500);
 });
