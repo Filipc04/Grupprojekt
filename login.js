@@ -22,11 +22,17 @@ function updateRequirement(id, isValid) {
   if (isValid) {
     element.classList.add("valid");
     element.classList.remove("invalid");
+
+    setTimeout(() => {
+      element.style.display = "none";
+    }, 500); 
   } else {
     element.classList.add("invalid");
     element.classList.remove("valid");
+    element.style.display = ""; 
   }
 }
+
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
   event.preventDefault(); 
@@ -70,11 +76,30 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     return;
   }
 
-  alert("You are now signed up and logged in!");
+  
   console.log(
     `New member has a username of ${username.value} and password of ${password.value}`
   );
 
   username.value = "";
   password.value = "";
+});
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault(); 
+
+  const successMessage = document.createElement("p");
+  successMessage.textContent = "You are now signed up and logged in!";
+  successMessage.style.color = "green";
+  successMessage.id = "successMessage";
+
+  const loginForm = document.getElementById("loginForm");
+
+  if (!document.getElementById("successMessage")) {
+    loginForm.appendChild(successMessage);
+  }
+
+  setTimeout(() => {
+    successMessage.style.display = "none";
+  }, 1000);
 });
