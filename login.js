@@ -90,7 +90,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   const successMessage = document.createElement("p");
   successMessage.textContent = "You are now signed up and logged in!";
-  successMessage.style.color = "green";
+  successMessage.classList.add("success_message");  
   successMessage.id = "successMessage";
 
   const loginForm = document.getElementById("loginForm");
