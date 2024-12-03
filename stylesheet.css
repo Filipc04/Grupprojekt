@@ -351,6 +351,10 @@ footer p {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .h1 {
+    text-align: center;
+    padding-left: 20px;
+  }
 }
 
 .invalid {
@@ -426,5 +430,9 @@ footer p {
   font-weight: bold;
   font-size: 24px; 
   text-align: center; 
+  margin-top: 10px;
+}
+
+.error_message{
   margin-top: 10px;
 }
