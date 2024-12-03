@@ -368,7 +368,6 @@ footer p {
 .login_form{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 420px;
   background: transparent;
@@ -378,7 +377,7 @@ footer p {
   border: 2px solid rgba(255, 255, 255, .2);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-  height: 480px;
+  margin: 40px;
 }
 
 .login_form .input_box{

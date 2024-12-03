@@ -15,6 +15,7 @@ document.getElementById("password").addEventListener("input", function () {
   updateRequirement("digit", digitValid);
   updateRequirement("special", specialValid);
   updateRequirement("length", lengthValid);
+  updateRequirement("criteria", capitalValid && digitValid && specialValid && lengthValid);
 });
 
 function updateRequirement(id, isValid) {
