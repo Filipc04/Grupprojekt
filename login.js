@@ -38,6 +38,13 @@ function updateRequirement(id, isValid) {
 document.getElementById("loginForm").addEventListener("submit", function (event) {
   event.preventDefault(); 
 
+  const successMessage = document.createElement("p");
+  successMessage.textContent = "You are now signed up and logged in!";
+  successMessage.classList.add("success_message");  
+  successMessage.id = "successMessage";
+
+  const loginForm = document.getElementById("loginForm");
+
   const username = document.getElementById("username");
   const password = document.getElementById("password").value;
 
@@ -77,6 +84,14 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     return;
   }
 
+  else{
+      loginForm.appendChild(successMessage);
+  
+    setTimeout(() => {
+      successMessage.style.display = "none";
+      window.location.href = "index.html";
+    }, 1500);
+  }
   
   console.log(
     `New member has a username of ${username.value} and password of ${password.value}`
@@ -89,19 +104,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 document.getElementById("loginForm").addEventListener("submit", function (event) {
   event.preventDefault(); 
 
-  const successMessage = document.createElement("p");
-  successMessage.textContent = "You are now signed up and logged in!";
-  successMessage.classList.add("success_message");  
-  successMessage.id = "successMessage";
+  
 
-  const loginForm = document.getElementById("loginForm");
-
-  if (!document.getElementById("successMessage")) {
-    loginForm.appendChild(successMessage);
-  }
-
-  setTimeout(() => {
-    successMessage.style.display = "none";
-    window.location.href = "index.html";
-  }, 1500);
+  
 });
