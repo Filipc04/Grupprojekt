@@ -64,23 +64,8 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
     return;
   }
 
-  if(!capital){
-    alert("Your password must contain at least two uppercase letters!");
-    return;
-  }
-
-  if (!digit) {
-    alert("Your password must contain at least one digit!");
-    return;
-  }
-
-  if (!special) {
-    alert("Your password must contain at least one special character!");
-    return;
-  }
-
-  if (!length) {
-    alert("Your password must be at least 8 characters long!");
+  if (!capital || !digit || !special || !length) {
+    alert("Your password does not meet all criteria!");
     return;
   }
 
@@ -99,12 +84,4 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 
   username.value = "";
   password.value = "";
-});
-
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-  event.preventDefault(); 
-
-  
-
-  
 });
